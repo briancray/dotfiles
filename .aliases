@@ -1,0 +1,8 @@
+#start a webserver
+alias http="python -m SimpleHTTPServer"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Prefered ls
+alias l="ls -laG"
