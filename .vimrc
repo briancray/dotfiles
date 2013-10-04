@@ -147,6 +147,9 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite * :call DeleteTrailingWS()
 
+" Quick starts for new files
+au BufNewFile *.html 0r ~/.vim/skeleton/skeleton.html
+
 
 " Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
