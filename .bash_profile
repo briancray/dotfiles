@@ -6,7 +6,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Run dotfiles in ~
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{aliases}; do
     [ -r "$file" ] && source "$file"
 done
 unset file
