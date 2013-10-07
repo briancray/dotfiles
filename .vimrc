@@ -71,6 +71,14 @@ set tm=500
 " Moving around
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Better arrow key mapping
+if has("mac") || has("macunix")
+    nmap <D-j> <M-j>
+    nmap <D-k> <M-k>
+    vmap <D-j> <M-j>
+    vmap <D-k> <M-k>
+endif
+
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
