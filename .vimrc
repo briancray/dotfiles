@@ -27,7 +27,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown.git'
 Bundle 'tpope/vim-surround.git'
 Bundle 'tpope/vim-commentary'
-Bundle 'henrik/vim-indexed-search'
+" Bundle 'henrik/vim-indexed-search'
 Bundle 'wookiehangover/jshint.vim'
 
 " Turn back on filetypes
@@ -122,7 +122,7 @@ set nowb
 set noswapfile
 
 " Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+set encoding=utf8 nobomb
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
