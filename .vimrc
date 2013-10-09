@@ -18,17 +18,12 @@ call vundle#rc()
 " Plugins
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdtree.git'
 Bundle 'tpope/vim-git'
 Bundle 'pangloss/vim-javascript'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown.git'
-Bundle 'tpope/vim-surround.git'
-Bundle 'tpope/vim-commentary'
-" Bundle 'henrik/vim-indexed-search'
-Bundle 'wookiehangover/jshint.vim'
+" Bundle 'wookiehangover/jshint.vim'
 
 " Turn back on filetypes
 filetype plugin indent on
@@ -80,6 +75,9 @@ set showmatch
 
 " How many tenths of a second to blink when matching brackets
 set mat=2
+
+" Remap VIM 0 to first non-blank character
+map 0 ^
 
 
 " Searching
