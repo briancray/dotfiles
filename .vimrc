@@ -13,18 +13,21 @@ filetype off
 
 " Load Vundle
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 " Plugins
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-git'
-Bundle 'pangloss/vim-javascript'
-Bundle 'groenewege/vim-less'
-Bundle 'tpope/vim-markdown.git'
-Bundle 'kchmck/vim-coffee-script'
-" Bundle 'wookiehangover/jshint.vim'
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-fugitive'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-git'
+Plugin 'pangloss/vim-javascript'
+Plugin 'groenewege/vim-less'
+Plugin 'tpope/vim-markdown.git'
+Plugin 'kchmck/vim-coffee-script'
+" Plugin 'wookiehangover/jshint.vim'
+
+" Unload Vundle
+call vundle#end()
 
 " Turn back on filetypes
 filetype plugin indent on
