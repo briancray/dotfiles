@@ -23,6 +23,7 @@ Bundle 'tpope/vim-git'
 Bundle 'pangloss/vim-javascript'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown.git'
+Bundle 'kchmck/vim-coffee-script'
 " Bundle 'wookiehangover/jshint.vim'
 
 " Turn back on filetypes
