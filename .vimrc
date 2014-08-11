@@ -24,6 +24,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-markdown.git'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'thinca/vim-localrc'
 " Plugin 'wookiehangover/jshint.vim'
 
 " Unload Vundle
