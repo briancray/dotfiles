@@ -4,9 +4,9 @@ set nocompatible
 
 " Vundle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 1. git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-" 2. open vim and run :BundleInstall
-" 3. update with :BundleUpdate
+" 1. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" 2. open vim and run :PluginInstall
+" 3. update with :PluginUpdate
 
 " Temporarily turn off filetype for Vundle
 filetype off
