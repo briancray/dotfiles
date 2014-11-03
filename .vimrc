@@ -91,7 +91,6 @@ set mat=2
 
 " Remap VIM 0 to first non-blank character
 map 0 ^
-map ; :CtrlP<enter>
 
 
 " Searching
@@ -162,6 +161,12 @@ autocmd BufWrite * :call DeleteTrailingWS()
 " Quick starts for new files
 au BufNewFile *.html 0r ~/.vim/skeleton/skeleton.html
 
+" Better file searching with CtrlP
+map ; :CtrlP<enter>                                                                                          
+let g:ctrlp_prompt_mappings = { 
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
 
 " Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
