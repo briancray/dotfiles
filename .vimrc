@@ -25,6 +25,7 @@ Plugin 'groenewege/vim-less'
 Plugin 'tpope/vim-markdown.git'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'thinca/vim-localrc'
+Plugin 'kien/ctrlp.vim'
 " Plugin 'wookiehangover/jshint.vim'
 
 " Unload Vundle
@@ -90,6 +91,7 @@ set mat=2
 
 " Remap VIM 0 to first non-blank character
 map 0 ^
+map ; :CtrlP<enter>
 
 
 " Searching
