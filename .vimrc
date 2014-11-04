@@ -162,7 +162,7 @@ autocmd BufWrite * :call DeleteTrailingWS()
 au BufNewFile *.html 0r ~/.vim/skeleton/skeleton.html
 
 " Better file searching with CtrlP
-map ; :CtrlP<enter>                                                                                          
+map ' :CtrlP<enter>                                                                                          
 let g:ctrlp_prompt_mappings = { 
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
