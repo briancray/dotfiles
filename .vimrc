@@ -20,13 +20,9 @@ Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-fugitive'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-git'
-Plugin 'pangloss/vim-javascript'
-Plugin 'groenewege/vim-less'
-Plugin 'tpope/vim-markdown.git'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'thinca/vim-localrc'
 Plugin 'kien/ctrlp.vim'
-" Plugin 'wookiehangover/jshint.vim'
+Plugin 'sheerun/vim-polyglot'
 
 " Unload Vundle
 call vundle#end()
@@ -112,16 +108,20 @@ set incsearch
 set magic
 
 
-" Colors and Fonts
+" Colors, Syntax and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Enable syntax highlighting
 syntax enable
 
-set t_Co=256
+" set t_Co=256
 set background=dark
+
 " let g:solarized_termcolors=256
 colorscheme solarized
+
+" parse .ract files as coffeescript
+au BufNewFile,BufRead *.ract set filetype=mustache
 
 
 " Files, backups and undo
@@ -162,12 +162,12 @@ autocmd BufWrite * :call DeleteTrailingWS()
 au BufNewFile *.html 0r ~/.vim/skeleton/skeleton.html
 
 " Better file searching with CtrlP
-map ' :CtrlP<enter>                                                                                          
-let g:ctrlp_prompt_mappings = { 
+map ' :CtrlP<enter>
+let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|\.log'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|\.log\|dist'
 
 " Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
