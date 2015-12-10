@@ -22,7 +22,16 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-git'
 Plugin 'thinca/vim-localrc'
 Plugin 'kien/ctrlp.vim'
-Plugin 'sheerun/vim-polyglot'
+"Plugin 'sheerun/vim-polyglot'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'JulesWang/css.vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'othree/html5.vim'
+Plugin 'sheerun/vim-json'
+Plugin 'sheerun/yajs.vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'groenewege/vim-less'
+Plugin 'cakebaker/scss-syntax.vim'
 
 " Unload Vundle
 call vundle#end()
@@ -123,6 +132,9 @@ colorscheme solarized
 " parse .ract files as coffeescript
 au BufNewFile,BufRead *.ract set filetype=mustache
 
+" Fix for scss
+" https://github.com/cakebaker/scss-syntax.vim#function-names-starting-with-a-keyword
+autocmd FileType scss set iskeyword+=-
 
 " Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
