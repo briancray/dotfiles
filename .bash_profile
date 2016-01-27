@@ -5,6 +5,11 @@ export PATH="$PATH:$HOME/bin"
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
+# command history settings
+export HISTCONTROL=ignoredups
+export HISTIGNORE='ls:pwd:date:'
+export HISTFILESIZE=5000
+
 # Run dotfiles in ~
 for file in ~/.{aliases}; do
     [ -r "$file" ] && source "$file"
