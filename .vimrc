@@ -22,16 +22,17 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-git'
 Plugin 'thinca/vim-localrc'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'sheerun/vim-polyglot'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'JulesWang/css.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'othree/html5.vim'
-Plugin 'sheerun/vim-json'
-Plugin 'sheerun/yajs.vim'
-Plugin 'tpope/vim-markdown'
-Plugin 'groenewege/vim-less'
-Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'sheerun/vim-polyglot'
+" Plugin 'kchmck/vim-coffee-script'
+" Plugin 'JulesWang/css.vim'
+" Plugin 'mustache/vim-mustache-handlebars'
+" Plugin 'othree/html5.vim'
+" Plugin 'sheerun/vim-json'
+" Plugin 'sheerun/yajs.vim'
+" Plugin 'tpope/vim-markdown'
+" Plugin 'groenewege/vim-less'
+" Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'mxw/vim-jsx'
 
 " Unload Vundle
 call vundle#end()
@@ -79,6 +80,9 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
+
+" Open up many tabs
+set tabpagemax=500
 
 
 " Moving around
@@ -135,6 +139,9 @@ au BufNewFile,BufRead *.ract set filetype=mustache
 " Fix for scss
 " https://github.com/cakebaker/scss-syntax.vim#function-names-starting-with-a-keyword
 autocmd FileType scss set iskeyword+=-
+
+" Force syntax fix when opening
+autocmd BufEnter,InsertLeave * :syntax sync fromstart
 
 " Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
