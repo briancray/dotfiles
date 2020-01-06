@@ -23,6 +23,7 @@ Plugin 'tpope/vim-git'
 Plugin 'thinca/vim-localrc'
 Plugin 'kien/ctrlp.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'dense-analysis/ale'
 " Plugin 'kchmck/vim-coffee-script'
 " Plugin 'JulesWang/css.vim'
 " Plugin 'mustache/vim-mustache-handlebars'
@@ -32,7 +33,7 @@ Plugin 'sheerun/vim-polyglot'
 " Plugin 'tpope/vim-markdown'
 " Plugin 'groenewege/vim-less'
 " Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'mxw/vim-jsx'
+" Plugin 'evanleck/vim-svelte'
 
 " Unload Vundle
 call vundle#end()
@@ -186,7 +187,7 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|\.log\|dist'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git|\.log\|dist\|__sapper__'
 
 " Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -213,3 +214,24 @@ set nowrap
 
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
+
+
+" ESLINT
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:ale_completion_enabled = 0
+let g:ale_fixers = { 'javascript': ['eslint'], 'html': ['eslint'] }
+let g:ale_javascript_standard_options = '--plugin html'
+let g:ale_linter_aliases = {'html': ['javascript']}
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '➜'
+
+autocmd BufNewFile,BufRead *.svelte set filetype=html
+
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" VIM-SVELTE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:svelte_indent_script = 0
+let g:svelte_indent_style = 0
