@@ -68,7 +68,7 @@ ZSH_THEME="simple"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,14 +117,6 @@ PATH="/Users/briancray/Library/Python/3.7/bin:/usr/local/opt/python/libexec/bin:
 LDFLAGS="-L/usr/local/opt/node/lib"
 CPPFLAGS="-I/usr/local/opt/node/include"
 export NODE_EXTRA_CA_CERTS="./node_modules/@apple/node-corp-certs/certs.pem"
-
-function precmd() {
-    if [ -r $PWD/.zsh_config ]; then
-        source $PWD/.zsh_config
-    else
-        source $HOME/.zshrc
-    fi
-}
 
 # Disable Python byte code
 PYTHONDONTWRITEBYTECODE=-1

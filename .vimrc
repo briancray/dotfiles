@@ -18,12 +18,12 @@ call vundle#begin()
 " Plugins
 Plugin 'gmarik/vundle'
 Plugin 'tpope/vim-fugitive'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-git'
+" Plugin 'altercation/vim-colors-solarized'
+" Plugin 'tpope/vim-git'
 Plugin 'thinca/vim-localrc'
 Plugin 'kien/ctrlp.vim'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'dense-analysis/ale'
+" Plugin 'dense-analysis/ale'
 " Plugin 'kchmck/vim-coffee-script'
 " Plugin 'JulesWang/css.vim'
 " Plugin 'mustache/vim-mustache-handlebars'
@@ -129,13 +129,13 @@ set magic
 syntax enable
 
 " set t_Co=256
-set background=dark
+" set background=dark
 
 " let g:solarized_termcolors=256
-colorscheme solarized
+" colorscheme solarized
 
 " parse .ract files as coffeescript
-au BufNewFile,BufRead *.ract set filetype=mustache
+" au BufNewFile,BufRead *.ract set filetype=mustache
 
 " Fix for scss
 " https://github.com/cakebaker/scss-syntax.vim#function-names-starting-with-a-keyword
